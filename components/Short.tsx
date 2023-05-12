@@ -22,12 +22,15 @@ export const Short = () => {
     }
     const handlePlay = () => {
         if (videoRef.current) {
+            console.log("playing")
+            setplaying(true)
             videoRef.current.play()
         }
     }
     const handlePause = () => {
         if (videoRef.current) {
             console.log("paused")
+            setplaying(false)
             videoRef.current.pause()
         }
     }
@@ -37,12 +40,13 @@ export const Short = () => {
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-                className='relative h-screen w-full overflow-hidden snap-center'
+                className='relative max-h-screen  h-screen w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
                     playing
                         ?
                         <motion.div
+                            onClick={handleClick}
                             initial={{
                                 opacity: 1
                             }}
@@ -55,15 +59,15 @@ export const Short = () => {
                             style={{
                                 backgroundColor: "rgba(0, 0, 0, 0.5)"
                             }} className='h-[68px] w-[68px] rounded-full bg-[rgba(0, 0, 0, 0.5)] 
-            absolute left-[50%] z-20 top-[50%] flex items-center justify-center
+            z-20 transform  flex items-center justify-center
             '>
                             <BsFillPauseFill className='text-white' fontSize={36} />
                         </motion.div>
                         :
-                        <div style={{
+                        <div onClick={handleClick} style={{
                             backgroundColor: "rgba(0, 0, 0, 0.5)"
                         }} className='h-[68px] w-[68px] rounded-full bg-[rgba(0, 0, 0, 0.5)] 
-            absolute left-[50%] z-20 top-[50%] flex items-center justify-center
+            z-20 transform  flex items-center justify-center
             '>
                             <BsPlay className='text-white' fontSize={36} />
                         </div>
