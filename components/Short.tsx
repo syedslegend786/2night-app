@@ -74,7 +74,7 @@ export const Short = () => {
 
                 }
                 <video muted loop={true} onClick={handleClick} className='h-full object-cover absolute z-10' ref={videoRef} >
-                    <source src='/test_short.mp4' />
+                    <source src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' />
                 </video>
                 <div className='absolute bottom-0 z-10 p-[21px] w-full'>
                     <div className='flex items-center space-x-[7px]'>
