@@ -6,7 +6,7 @@ const Home = () => {
     <div className='p-5'>
       <button onClick={() => {
         router.push("/shorts")
-      }} className='bg-blue-500 w-full text-white p-2 rounded-xl text-sm'>View Shorts</button>
+      }} className='bg-blue-500 w-full text-white p-2 rounded-xl text-sm'>View Latest Shorts</button>
     </div>
   )
 }

@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.screen_height {
+    height: 100vh;
+    max-height: 100%;
+}
