@@ -5,5 +5,5 @@
 
 .screen_height {
     height: 100vh;
-    height: 100dvh; /* Fallback for browsers that do not support Custom Properties */
+    /* height: 100dvh;  */
 }
