@@ -42,10 +42,8 @@ export const Short = () => {
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-                style={{
-                    height: height
-                }}
-                className='relative  w-full overflow-hidden snap-center flex items-center justify-center'
+               
+                className='relative h-full  w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
                     playing
