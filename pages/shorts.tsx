@@ -7,16 +7,12 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useWindowDimensions } from '@/utils/useWindowDimensions'
 const ShortsPage = () => {
-    const [snapScroll, setsnapScroll] = useState("snap-start")
     const [loaded, setloaded] = useState(false)
     const { height, width } = useWindowDimensions()
     const router = useRouter()
     useEffect(() => {
         setloaded(true)
     }, [])
-    useEffect(() => {
-        setsnapScroll("snap-end")
-    }, [height])
     return (
         <>
             {
@@ -27,7 +23,8 @@ const ShortsPage = () => {
                     :
                     <div
                         style={{
-                            height: height
+                            height: "100dvh",
+                            position: "relative"
                         }}
                     >
                         <div onClick={() => { router.push("/") }} className='absolute top-[20px] left-[20px] z-50 flex items-center gap-x-2'>
@@ -38,15 +35,14 @@ const ShortsPage = () => {
                             <h1 className='text-white'>{height}</h1>
                         </div>
                         <div
-                            style={{ height: height }}
-                            className='w-full  snap-y overflow-auto snap-mandatory '>
-                            <div className={`${snapScroll}  !h-full`}>
+                            className='absolute left-0 right-0 top-0 bottom-0  snap-y overflow-scroll snap-mandatory '>
+                            <div className='snap-start snap-normal  !h-full !w-full'>
                                 <Short />
                             </div>
-                            <div className={`${snapScroll}  !h-full`}>
+                            <div className='snap-start snap-normal  !h-full !w-full'>
                                 <Short />
                             </div>
-                            <div className={`${snapScroll}  !h-full`}>
+                            <div className='snap-start snap-normal  !h-full !w-full'>
                                 <Short />
                             </div>
                         </div>

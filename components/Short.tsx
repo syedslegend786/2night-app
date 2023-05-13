@@ -42,7 +42,7 @@ export const Short = () => {
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-               
+
                 className='relative h-full  w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
@@ -76,7 +76,7 @@ export const Short = () => {
                         </div>
 
                 }
-                <video muted loop={true} onClick={handleClick} className='h-full object-cover absolute z-10' ref={videoRef} >
+                <video muted loop={true} onClick={handleClick} className='object-cover absolute h-full z-10' ref={videoRef} >
                     <source src='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4' />
                 </video>
                 <div className='absolute bottom-0 z-10 p-[21px] w-full'>
