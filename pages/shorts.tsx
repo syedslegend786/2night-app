@@ -21,16 +21,19 @@ const ShortsPage = () => {
             </div>
             <div
                 className='w-full h-full snap-y overflow-scroll snap-mandatory'>
-                <div className='snap-center  h-full'>
+                <div className='snap-start  h-full'>
                     <Short />
                 </div>
-                <div className='snap-center  h-full'>
+                <div className='snap-start  h-full'>
                     <Short />
                 </div>
-                <div className='snap-center  h-full'>
+                <div className='snap-start  h-full'>
                     <Short />
                 </div>
-                <div className='snap-center  h-full'>
+                <div className='snap-start  h-full'>
+                    <Short />
+                </div>
+                <div className='snap-start  h-full'>
                     <Short />
                 </div>
             </div>
