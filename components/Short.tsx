@@ -7,8 +7,10 @@ import { VscCalendar } from 'react-icons/vsc'
 import { FaRegHeart } from 'react-icons/fa'
 import { AiOutlineShareAlt } from 'react-icons/ai'
 import Link from 'next/link'
+import { useWindowDimensions } from '@/utils/useWindowDimensions';
 export const Short = () => {
     const [hasWindow, sethasWindow] = useState(false)
+    const { height, width } = useWindowDimensions()
     const [playing, setplaying] = useState(true)
     const videoRef = useRef<HTMLVideoElement>(null)
     const handleClick = () => {
@@ -40,7 +42,10 @@ export const Short = () => {
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-                className='relative h-full   w-full overflow-hidden snap-center flex items-center justify-center'
+                style={{
+                    height: height
+                }}
+                className='relative  w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
                     playing
