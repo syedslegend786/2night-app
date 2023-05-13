@@ -15,7 +15,7 @@ const ShortsPage = () => {
                     <Image src={"/logo.png"} alt='' fill className='object-contain' />
                 </div>
             </div>
-            <div className='screen_height w-full snap-y overflow-scroll snap-mandatory'>
+            <div className='screen_height  w-full snap-y overflow-scroll snap-mandatory'>
                 <div className='snap-center'>
                     <Short />
                 </div>

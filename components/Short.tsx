@@ -40,7 +40,7 @@ export const Short = () => {
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-                className='relative screen_height  screen_height w-full overflow-hidden snap-center flex items-center justify-center'
+                className='relative screen_height   w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
                     playing
