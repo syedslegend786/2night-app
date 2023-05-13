@@ -9,6 +9,7 @@ import { useWindowDimensions } from '@/utils/useWindowDimensions'
 const ShortsPage = () => {
     const { height, width } = useWindowDimensions()
     const router = useRouter()
+
     return (
         <div
             className='fixed h-full w-full '
@@ -18,6 +19,7 @@ const ShortsPage = () => {
                 <div className='w-[83px] h-[20px] relative'>
                     <Image src={"/logo.png"} alt='' fill className='object-contain' />
                 </div>
+                <h1 className='text-white'>{height}</h1>
             </div>
             <div
                 className='w-full h-full snap-y overflow-scroll snap-mandatory'>
