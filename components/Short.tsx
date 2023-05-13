@@ -9,6 +9,8 @@ import { AiOutlineShareAlt } from 'react-icons/ai'
 import Link from 'next/link'
 import { useWindowDimensions } from '@/utils/useWindowDimensions';
 export const Short = () => {
+    const divRef = useRef<HTMLDivElement>(null)
+    const [divHeight, setdivHeight] = useState(0)
     const [hasWindow, sethasWindow] = useState(false)
     const { height, width } = useWindowDimensions()
     const [playing, setplaying] = useState(true)
@@ -37,12 +39,18 @@ export const Short = () => {
         }
     }
     // useEffect(() => {
-    //     sethasWindow(true)
-    // }, [])
+    //     if (divRef.current) {
+    //         setdivHeight(divRef.current?.clientHeight)
+    //         console.log("div height", divRef.current?.clientHeight)
+           
+            
+    //         }
+    //     }
+    // }, [divRef.current])
     return (
         <Waypoint onEnter={handlePlay} onLeave={handlePause}>
             <div
-
+                ref={divRef}
                 className='relative h-full  w-full overflow-hidden snap-center flex items-center justify-center'
             >
                 {
@@ -110,7 +118,7 @@ export const Short = () => {
                         <div className='space-y-3'>
                             <div className='w-max space-y-1 mb-4'>
                                 <FaRegHeart className='text-white mx-auto' size={21} />
-                                <h1 className='text-xs text-white text-center'>0</h1>
+                                <h1 className='text-xs text-white text-center'>{divHeight }</h1>
                             </div>
                             <Link href={"https://www.google.com"} target='_blank'>
                                 <div className='w-max space-y-1'>

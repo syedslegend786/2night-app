@@ -23,8 +23,7 @@ const ShortsPage = () => {
                     :
                     <div
                         style={{
-                            height: "100dvh",
-                            position: "relative"
+                            height: "100%"
                         }}
                     >
                         <div onClick={() => { router.push("/") }} className='absolute top-[20px] left-[20px] z-50 flex items-center gap-x-2'>
@@ -32,17 +31,18 @@ const ShortsPage = () => {
                             <div className='w-[83px] h-[20px] relative'>
                                 <Image src={"/logo.png"} alt='' fill className='object-contain' />
                             </div>
-                            <h1 className='text-white'>{height}</h1>
+                            {/* <h1 className='text-white'>{height}</h1> */}
                         </div>
                         <div
-                            className='absolute left-0 right-0 top-0 bottom-0  snap-y overflow-scroll snap-mandatory '>
-                            <div className='snap-start snap-normal  !h-full !w-full'>
+                            style={{ height: height }}
+                            className='w-full  snap-y overflow-scroll snap-mandatory '>
+                            <div className='snap-start snap-normal  !h-full'>
                                 <Short />
                             </div>
-                            <div className='snap-start snap-normal  !h-full !w-full'>
+                            <div className='snap-start snap-normal  !h-full'>
                                 <Short />
                             </div>
-                            <div className='snap-start snap-normal  !h-full !w-full'>
+                            <div className='snap-start snap-normal  !h-full'>
                                 <Short />
                             </div>
                         </div>
