@@ -11,8 +11,8 @@ const ShortsPage = () => {
     const router = useRouter()
     return (
         <div
-            style={{ height }}
-            className='relative  w-full'>
+            className='fixed h-full w-full '
+        >
             <div onClick={() => { router.push("/") }} className='absolute top-[20px] left-[20px] z-50 flex items-center gap-x-2'>
                 <HiArrowLeft className='text-white' fontSize={24} />
                 <div className='w-[83px] h-[20px] relative'>
@@ -20,15 +20,17 @@ const ShortsPage = () => {
                 </div>
             </div>
             <div
-                style={{ height }}
-                className='w-full snap-y overflow-scroll snap-mandatory'>
-                <div className='snap-center'>
+                className='w-full h-full snap-y overflow-scroll snap-mandatory'>
+                <div className='snap-center  h-full'>
                     <Short />
                 </div>
-                <div className='snap-center'>
+                <div className='snap-center  h-full'>
                     <Short />
                 </div>
-                <div className='snap-center'>
+                <div className='snap-center  h-full'>
+                    <Short />
+                </div>
+                <div className='snap-center  h-full'>
                     <Short />
                 </div>
             </div>

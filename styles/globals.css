@@ -6,3 +6,6 @@
 .screen_height {
     height: 100svh;
 }
+body{
+    height: 100%;
+}
